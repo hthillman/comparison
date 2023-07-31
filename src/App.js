@@ -38,7 +38,7 @@ function App() {
             </div>
             <div className="live">
               <h2>Live</h2>
-              <Player experiment_name="mux" src="" />
+              <Player experiment_name="mux" src="https://stream.mux.com/H02tZm29ZfcKKi498UmZwuWYQpqZKk01KL1x602Tx5ds00E.m3u8" />
             </div>
           </div>
         </div>
