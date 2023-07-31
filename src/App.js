@@ -32,13 +32,13 @@ function App() {
             <div className="vod">
               <h2>VOD</h2>
               <Player
-                experiment_name="mux"
+                experimentName="mux"
                 src="https://stream.mux.com/cWMZOKPKyTG7US3iRQmwyD00OH65c16IJ9Qsl02OpE01Og.m3u8"
               />
             </div>
             <div className="live">
               <h2>Live</h2>
-              <Player experiment_name="mux" src="https://stream.mux.com/H02tZm29ZfcKKi498UmZwuWYQpqZKk01KL1x602Tx5ds00E.m3u8" />
+              <Player experimentName="mux" src="https://stream.mux.com/H02tZm29ZfcKKi498UmZwuWYQpqZKk01KL1x602Tx5ds00E.m3u8" />
             </div>
           </div>
         </div>
@@ -56,13 +56,13 @@ function App() {
             <div className="vod">
               <h2>VOD</h2>
               <Player
-                experiment_name="cloudflare"
+                experimentName="cloudflare"
                 src="https://customer-mkpy5tx81x2wp0kg.cloudflarestream.com/13e70c54a9c45f64148e20b2a3ea3b5a/manifest/video.m3u8"
               />
             </div>
             <div className="live">
               <h2>Live</h2>
-              <Player experiment_name="cloudflare" src="" />
+              <Player experimentName="cloudflare" src="" />
             </div>
           </div>
         </div>
@@ -80,14 +80,14 @@ function App() {
             <div className="vod">
               <h2>VOD</h2>
               <Player
-                experiment_name="livepeer"
+                experimentName="livepeer"
                 src="https://lp-playback.com/hls/30e4ugexbeuetvqq/index.m3u8"
               />
             </div>
             <div className="live">
               <h2>Live</h2>
               <Player
-                experiment_name="livepeer"
+                experimentName="livepeer"
                 src="https://livepeercdn.studio/hls/a4b0sru3bupiy536/index.m3u8"
               />
             </div>

@@ -15,7 +15,7 @@ export const PlayerWithMuxData = forwardRef((props, ref) => {
         player_init_time: initTime,
       },
     });
-  }, []);
+  }, [props.experimentName]);
 
   return (
     <Player
