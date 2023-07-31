@@ -1,34 +1,29 @@
-import mux from 'mux-embed';
-import React, { useEffect, useRef, forwardRef } from 'react';
-import {
-    Player
-  } from '@livepeer/react';
+import mux from "mux-embed";
+import React, { useCallback, forwardRef } from "react";
+import { Player } from "@livepeer/react";
 
-export const PlayerWithMuxData = forwardRef(function VideoPlayer (props) {
-  const videoRef = useRef(null);
+export const PlayerWithMuxData = forwardRef((props, ref) => {
+  const mediaElementRef = useCallback((element) => {
+    const initTime = mux.utils.now();
 
-  useEffect(() => {
-    if (videoRef.current) {
-      const initTime = mux.utils.now();
+    mux.monitor(element, {
+      debug: false,
+      data: {
+        env_key: "jama51f8fo0defu8ruvoe3vk9", // required
+        experiment_name: props.experimentName,
+        player_name: "Livepeer Player",
+        player_init_time: initTime,
+      },
+    });
+  }, []);
 
-      mux.monitor(videoRef.current, {
-        debug: false,
-        data: {
-          env_key: 'jama51f8fo0defu8ruvoe3vk9', // required
-          experiment_name: props.experimentName,
-          player_init_time: initTime,
-        }
-      });
-    }
-  }, [videoRef, props.experimentName]);
-
-  console.warn(props.src)
   return (
     <Player
       controls
-      ref={videoRef}
+      mediaElementRef={mediaElementRef}
       src={props.src}
-      style={{ width: '100%', maxWidth: '500px' }}
+      lowLatency={true}
+      style={{ width: "100%", maxWidth: "500px" }}
     />
   );
-})
+});
