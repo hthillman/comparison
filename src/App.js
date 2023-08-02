@@ -62,7 +62,7 @@ function App() {
             </div>
             <div className="live">
               <h2>Live</h2>
-              <Player experimentName="cloudflare" src="" />
+              <Player experimentName="cloudflare" src="https://customer-mkpy5tx81x2wp0kg.cloudflarestream.com/f6f282cedd21c7d972267a8e71f6687f/manifest/video.m3u8" />
             </div>
           </div>
         </div>
